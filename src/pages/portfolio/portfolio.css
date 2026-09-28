@@ -1,0 +1,170 @@
+.portfolio {
+  --ink: #0a0a0a;
+  --paper: #ffffff;
+  --blue: #1428ff;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.portfolio a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio .band {
+  border-bottom: 4px solid var(--ink);
+  padding: 0 1.75rem;
+}
+
+.portfolio .name {
+  font-weight: 900;
+  font-size: clamp(3.2rem, 11vw, 9.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  margin: 0.9em 0 0.35em;
+  text-transform: uppercase;
+}
+
+.portfolio .tagline {
+  font-weight: 500;
+  font-size: clamp(1rem, 2.1vw, 1.35rem);
+  max-width: 34ch;
+  margin: 0 0 1.2em;
+}
+
+.portfolio .nav-row {
+  display: flex;
+  gap: 2.2rem;
+  padding: 1rem 0 1.1rem;
+  border-top: 4px solid var(--ink);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+.portfolio .nav-row a:hover,
+.portfolio .nav-row a:focus-visible {
+  color: var(--blue);
+}
+
+.portfolio .section-head {
+  padding: 1.4rem 1.75rem 0;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.portfolio .work-list {
+  padding: 0 1.75rem;
+}
+
+.portfolio .work-row {
+  display: grid;
+  grid-template-columns: 4rem 1fr auto auto;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 3px solid var(--ink);
+}
+
+.portfolio .work-list a.work-row {
+  display: grid;
+}
+
+.portfolio .work-row:last-child {
+  border-bottom: 3px solid var(--ink);
+}
+
+.portfolio .work-row .year {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6b6b6b;
+}
+
+.portfolio .work-row .title {
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3.4vw, 2.6rem);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.portfolio .work-row:hover .title,
+.portfolio .work-row:focus-visible .title {
+  color: var(--blue);
+}
+
+.portfolio .work-row .client {
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.portfolio .work-row .medium {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  text-align: right;
+}
+
+.portfolio .about {
+  padding: 2.4rem 1.75rem 2.8rem;
+  border-top: 4px solid var(--ink);
+}
+
+.portfolio .about p {
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  line-height: 1.45;
+  max-width: 34ch;
+  margin: 0 0 1.1em;
+}
+
+.portfolio .about p:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio .contact {
+  padding: 2.2rem 1.75rem 3rem;
+  border-top: 4px solid var(--ink);
+}
+
+.portfolio .contact a {
+  display: inline-block;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.portfolio .contact a:hover,
+.portfolio .contact a:focus-visible {
+  color: var(--blue);
+}
+
+.portfolio .contact .meta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.8rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.portfolio .contact .meta a:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 640px) {
+  .portfolio .work-row {
+    grid-template-columns: 2.4rem 1fr;
+    row-gap: 0.35rem;
+  }
+  .portfolio .work-row .client,
+  .portfolio .work-row .medium {
+    text-align: left;
+    grid-column: 2;
+  }
+}

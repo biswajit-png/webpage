@@ -1,0 +1,260 @@
+.health {
+  --oat: #f2ead9;
+  --panel: #faf5e9;
+  --ink: #2c2417;
+  --ink-dim: #7a7060;
+  --ochre: #bb8a2f;
+  --ochre-soft: #e4c98a;
+  --sage: #69795a;
+  --sage-soft: #cddac0;
+  --coral: #d97a5c;
+  --line: rgba(44, 36, 23, 0.09);
+
+  background: var(--oat);
+  color: var(--ink);
+  font-family: "Work Sans", -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.health .board {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.health .greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.health .greeting h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 2.1rem;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.health .greeting .date {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+
+.health .grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Recovery hero ring */
+.health .recovery {
+  background: var(--panel);
+  border-radius: 38px 46px 40px 50px;
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.1rem;
+}
+
+.health .ring-wrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: breathe 6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+.health .ring-wrap svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.health .ring-track {
+  fill: none;
+  stroke: var(--ochre-soft);
+  stroke-width: 14;
+}
+
+.health .ring-value {
+  fill: none;
+  stroke: var(--ochre);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.health .ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.health .ring-center strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.health .ring-center span {
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+  margin-top: 0.3rem;
+}
+
+.health .recovery-caption {
+  font-size: 0.95rem;
+  color: var(--ink-dim);
+  max-width: 30ch;
+  line-height: 1.5;
+}
+
+/* right column widgets stack */
+.health .stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.health .widget {
+  background: var(--panel);
+  padding: 1.5rem 1.6rem;
+}
+
+.health .widget.sleep {
+  border-radius: 30px 20px 36px 22px;
+}
+
+.health .widget.move {
+  border-radius: 22px 34px 20px 32px;
+}
+
+.health .widget-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.9rem;
+}
+
+.health .widget-top h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.health .widget-top .metric {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.health .sleep-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 46px;
+}
+
+.health .sleep-bars span {
+  flex: 1;
+  border-radius: 6px;
+  background: var(--sage-soft);
+}
+
+.health .sleep-bars span.deep {
+  background: var(--sage);
+}
+
+.health .widget-note {
+  margin: 0.7rem 0 0;
+  font-size: 0.83rem;
+  color: var(--ink-dim);
+}
+
+.health .move-arc {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.health .move-arc svg {
+  width: 64px;
+  height: 64px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+.health .move-track {
+  fill: none;
+  stroke: var(--sage-soft);
+  stroke-width: 8;
+}
+
+.health .move-value {
+  fill: none;
+  stroke: var(--sage);
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+/* Insight card, full width */
+.health .insight {
+  grid-column: 1 / -1;
+  background: var(--ink);
+  color: var(--oat);
+  border-radius: 34px 44px 30px 46px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+}
+
+.health .insight .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--coral);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.health .insight p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.health .insight strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+@media (max-width: 680px) {
+  .health .grid {
+    grid-template-columns: 1fr;
+  }
+}

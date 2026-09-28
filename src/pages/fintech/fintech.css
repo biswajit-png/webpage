@@ -1,0 +1,281 @@
+.fintech {
+  --ink: #0f1418;
+  --ink-panel: #161d23;
+  --paper: #ece8df;
+  --paper-dim: #9a988d;
+  --brass: #c2996a;
+  --ledger-green: #6f9284;
+  --rule: rgba(236, 232, 223, 0.14);
+
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "IBM Plex Sans", -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.fintech .wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Masthead */
+.fintech .masthead {
+  border-bottom: 1px solid var(--rule);
+}
+
+.fintech .masthead-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 0;
+}
+
+.fintech .wordmark {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.fintech .wordmark em {
+  color: var(--brass);
+  font-style: italic;
+}
+
+.fintech .masthead nav {
+  display: flex;
+  gap: 2.1rem;
+  font-size: 0.92rem;
+}
+
+.fintech .masthead nav a {
+  text-decoration: none;
+  color: var(--paper-dim);
+  transition: color 0.15s ease;
+}
+
+.fintech .masthead nav a:hover,
+.fintech .masthead nav a:focus-visible {
+  color: var(--paper);
+}
+
+.fintech .masthead-sub {
+  display: flex;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--paper-dim);
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* Hero */
+.fintech .hero {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 4rem;
+  padding: 4.5rem 0 5rem;
+  align-items: end;
+}
+
+.fintech .hero h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 4.4vw, 4rem);
+  line-height: 1.06;
+  margin: 0 0 1.6rem;
+  max-width: 15ch;
+}
+
+.fintech .hero h1 i {
+  color: var(--brass);
+  font-style: italic;
+}
+
+.fintech .hero p {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--paper-dim);
+  max-width: 46ch;
+  margin: 0 0 2.1rem;
+}
+
+.fintech .cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fintech .cta {
+  background: var(--paper);
+  color: var(--ink);
+  border: none;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.fintech .cta:hover {
+  background: var(--brass);
+}
+
+.fintech .cta-note {
+  font-size: 0.85rem;
+  color: var(--paper-dim);
+}
+
+/* Exhibit panel */
+.fintech .exhibit {
+  background: var(--ink-panel);
+  border: 1px solid var(--rule);
+  padding: 1.6rem 1.7rem 1.8rem;
+}
+
+.fintech .exhibit-label {
+  font-size: 0.8rem;
+  color: var(--paper-dim);
+  margin: 0 0 1.1rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.9rem;
+}
+
+.fintech .exhibit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.fintech .exhibit-row:last-of-type {
+  border-bottom: none;
+}
+
+.fintech .exhibit-row span:first-child {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--paper-dim);
+  font-size: 0.88rem;
+}
+
+.fintech .exhibit-row .up {
+  color: var(--ledger-green);
+}
+
+.fintech .exhibit-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 1.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--paper-dim);
+}
+
+.fintech .exhibit-total span:first-child {
+  font-size: 0.85rem;
+  color: var(--paper-dim);
+}
+
+.fintech .exhibit-total strong {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Ledger list */
+.fintech .ledger-section {
+  border-top: 1px solid var(--rule);
+  padding: 4.5rem 0;
+}
+
+.fintech .ledger-section > p.kicker {
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--paper-dim);
+  max-width: 40ch;
+  margin: 0 0 2.6rem;
+}
+
+.fintech .ledger-table {
+  border-top: 1px solid var(--rule);
+}
+
+.fintech .ledger-line {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr 1.6fr;
+  gap: 2.5rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.fintech .ledger-line .num {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--brass);
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+.fintech .ledger-line h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.45rem;
+  margin: 0;
+}
+
+.fintech .ledger-line p {
+  color: var(--paper-dim);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 52ch;
+}
+
+/* Pull quote */
+.fintech .pullquote-section {
+  border-top: 1px solid var(--rule);
+  padding: 5rem 0;
+}
+
+.fintech .pullquote {
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.4;
+  max-width: 26ch;
+  margin: 0 0 1.6rem;
+}
+
+.fintech .pullquote-attr {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--paper-dim);
+}
+
+/* Footer */
+.fintech footer {
+  border-top: 1px solid var(--rule);
+  padding: 2.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--paper-dim);
+}
+
+@media (max-width: 760px) {
+  .fintech .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 0;
+  }
+  .fintech .masthead nav {
+    display: none;
+  }
+  .fintech .ledger-line {
+    grid-template-columns: 2.4rem 1fr;
+  }
+}
